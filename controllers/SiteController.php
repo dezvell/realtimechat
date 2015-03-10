@@ -68,11 +68,6 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-
-//            $frame = $this->nodeSocket->getFrameFactory()->createAuthenticationFrame();
-//            $frame->setUserId(Yii::$app->user->getId());
-//            $frame->send();
-
             return $this->redirect(['chat']);
         } else {
             return $this->render('login', [

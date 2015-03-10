@@ -5,26 +5,20 @@ use yii\helpers\Html;
 $this->title = 'Chat';
 ?>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/web/js/js/server/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
-<script src="/web/js/js/client/client.js"></script>
+<script src="/js/server/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+<script src="/js/client/client.js"></script>
 <script>
+    // init YiiNodeSocket
     var socket = new YiiNodeSocket();
-    socket.debug(true);
-    var testRoom;
 
-    socket.on('room_leave', function(){
-        alert('ss');
-    });
-
+    // connect to socket
     socket.onConnect(function () {
-
-        console.log(socket.roomClients);
-
+        // join to room 'chatRoom'
         var room = socket.room('chatRoom').join(function (success, numberOfRoomSubscribers) {
             if (success && numberOfRoomSubscribers <= 2) {
                 if (numberOfRoomSubscribers == 1) {
                     $('#wait').css({ 'display': "block" });
-                }
+               }
                 else {
                     $('#chat').css({ 'display': "block" });
                     this.emit('toJoin' , {
@@ -39,6 +33,7 @@ $this->title = 'Chat';
             }
         });
 
+        // listener to sendMassage event
         room.on('sendMessage', function (data) {
             if (data.message.msg === '') return false;
             var who = '';
@@ -67,7 +62,6 @@ $this->title = 'Chat';
         });
 
         room.on('toLeave', function (data) {
-            console.log(data.countClients);
             if (data.countClients == 2) {
                 $('#wait').css({ 'display': "block" });
                 $('#chat').css({ 'display': "none" });
@@ -86,15 +80,13 @@ $this->title = 'Chat';
             });
             msg.val('').focus();
             $('.chatList').animate({ scrollTop: $(".chatList")[0].scrollHeight }, 100);
-
         });
-
+        // press 'Return' for send message
         $('#message textarea').keypress(function(e){
             if(e.which == 13) {
                 e.preventDefault();
                 $("#send").trigger('click');
             }
-
         });
     });
 </script>
@@ -113,4 +105,3 @@ $this->title = 'Chat';
         <button id="send">Send</button>
     </div>
 </div>
-
