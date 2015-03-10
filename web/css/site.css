@@ -1,0 +1,221 @@
+html,
+body {
+    height: 100%;
+    /*background: url('/web/img/bg2.jpg') no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* --------------------- chat -------------------- */
+
+ul.chatList {
+    overflow: auto;
+    bottom: 200px;
+    vertical-align: top;
+    width: 900px;
+    height: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul.chatList li {
+    list-style-type: none;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+ul.chatList li.system {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+ul.chatList li span.name {
+    padding: 10px;
+}
+
+ul.chatList li.you {
+    float: left;
+}
+
+ul.chatList li.you span.name {
+    text-align: right;
+    float: left;
+    display: block;
+    width: 100px;
+    color: #6F6F6F;
+}
+
+ul.chatList li.you span.msg {
+    float: right;
+    color: #6F6F6F;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: rgb(204, 229, 255);
+    border-radius: 5px 5px 5px 0;
+    display: block;
+    width: 500px;
+}
+
+ul.chatList li.me {
+    float: right;
+}
+
+ul.chatList li.me span.name {
+    text-align: left;
+    float: right;
+    display: block;
+    width: 100px;
+    color: #6F6F6F;
+}
+
+ul.chatList li.me span.msg {
+    color: #6F6F6F;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: rgb(233, 243, 255);
+    border-radius: 5px 5px 0 5px;
+    display: block;
+    width: 500px;
+}
+
+#message {
+    vertical-align: top;
+    width: 700px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0 10px rgb(150, 201, 237);
+}
+
+#message textarea {
+    color: #6A747F;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px;
+    width: 600px;
+    height: 60px;
+    resize: none;
+    border-left: 2px solid rgb(73, 153, 245);
+    border-top: 2px solid rgb(73, 153, 245);
+    border-bottom: 2px solid rgb(73, 153, 245);
+}
+#message button {
+    color: white;
+    text-shadow: 1px 0 3px rgb(0, 18, 139);
+    border: 2px solid rgb(73, 153, 245);
+    background: rgb(120, 174, 236);
+    font-size: 20px;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 60px;
+    font-weight: bold;
+}
+
+.site-login {
+    text-align: center;
+    width:700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#wait, #excessive {
+    text-align: center;
+    font-size:20px;
+    color:#666;
+}
