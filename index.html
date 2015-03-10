@@ -43,10 +43,16 @@
 <pre><code>\vendor\yii-node-socket
 </code></pre>
 
-<p>Для работы чата нужно запустить server c помощью bash команд.</p>
+<ul>
+<li>Создаем базу данных. Dump базы лежит в корне приложения</li>
+</ul>
 
-<pre><code>cd web\js\server
-node server.js
+<pre><code>/yii2basic.sql
+</code></pre>
+
+<p>Для работы чата нужно запустить server c помощью bash команды в корне приложения:</p>
+
+<pre><code>&gt; chat
 </code></pre>
 
 <p>Если проект не индексируется по адресу /index.php нужно зайти в /web/index.php, в этом случае в файле /views/site/chat.php нужно поправить пути:</p>
