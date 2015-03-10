@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 10, 2015 at 04:58 PM
+-- Generation Time: Mar 10, 2015 at 05:06 PM
 -- Server version: 5.5.41-log
 -- PHP Version: 5.4.35
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `yii2basic`
 --
+CREATE DATABASE IF NOT EXISTS `yii2basic` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `yii2basic`;
 
 -- --------------------------------------------------------
 
